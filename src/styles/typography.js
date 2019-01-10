@@ -32,7 +32,7 @@ export const heading = (theme, level = 0) => ({
   color: theme.brandColor,
   fontFamily: theme.fontHeading,
   fontSize: getFontSize(theme, level),
-  fontWeight: 600,
+  fontWeight: theme.headingWeight,
   lineHeight: theme.msRatio,
   position: "relative"
 });

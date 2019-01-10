@@ -35,9 +35,8 @@ const isToken = t => t instanceof Prism.Token;
 const renderPrismTokens = (tokens, styles) => {
   return tokens.map((t, i) => {
     if (isToken(t)) {
-      console.log(t.type);
       return (
-        <span key={`${t.type}-${i}`} className={css(styles[t.type])} data-type={`${t.type}`}>
+        <span key={`${t.type}-${i}`} className={css(styles[t.type])}>
           {Array.isArray(t.content)
             ? renderPrismTokens(t.content, styles)
             : t.content}
@@ -64,9 +63,9 @@ export default class HighlightedCode extends Component {
         <code className={css(styles.code)}>
           {lang
             ? renderPrismTokens(
-              Prism.tokenize(code, Prism.languages[lang], lang),
-              theme.codeStyles
-            )
+                Prism.tokenize(code, Prism.languages[lang], lang),
+                theme.codeStyles
+              )
             : code}
         </code>
       </pre>

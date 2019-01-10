@@ -15,6 +15,9 @@ export default {
   pageHeadingBackground: "#003B5C",
   pageHeadingTextColor: "#fff",
 
+  // Heading
+  headingWeight: "initial",
+
   // Used in Menu and PageHeader to make sure the top parts have
   // the same height.
   pageHeadingHeight: 200,
@@ -45,6 +48,36 @@ export default {
     function: { color: "#FF5555" },
     keyword: { color: "#3F7397" },
     string: { color: "#00263E" }
+  },
+
+  // List items.
+  listStyles: {
+    link: {
+      fontFamily: '"Open sans","Helvetica Neue",Helvetica,Arial,sans-serif;',
+      fontSize: "12px",
+      lineHeight: "16px",
+      fontWeight: "700",
+      borderTop: "none",
+      margin: "20px 16px",
+      hoverBorderTop: "none",
+      hoverTextDecoration: "underline",
+      cursor: "pointer"
+    },
+    activeLink: {
+      cursor: "pointer",
+      margin: "32px 16px",
+      hoverBorderTop: "none",
+      hoverTextDecoration: "underline"
+    },
+    nestedLink: {
+      margin: "0 16px 12px 28px",
+      fontWeight: 400,
+      hoverTextDecoration: "underline"
+    },
+    nestedActiveLink: {
+      cursor: "pointer",
+      fontWeight: 700
+    }
   },
 
   // Patterns
