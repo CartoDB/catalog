@@ -15,36 +15,32 @@ const baseLinkStyle = {
 const style = theme => {
   return {
     link: {
-      ...text(theme),
       ...baseLinkStyle,
-      borderTop: `1px solid ${theme.sidebarColorLine}`,
-      color: theme.sidebarColorText,
-      cursor: "pointer",
+      fontFamily: theme.listStyles.link.fontFamily,
+      fontSize: theme.listStyles.link.fontSize,
+      lineHeight: theme.listStyles.link.lineHeight,
+      fontWeight: theme.listStyles.link.fontWeight,
+      borderTop: theme.listStyles.link.borderTop,
+      color: theme.textColor,
+      cursor: theme.listStyles.link.cursor,
       display: "block",
-      margin: 0,
-      padding: "16px 40px",
+      margin: theme.listStyles.link.margin,
       textDecoration: "none",
       "&:hover, &:active, &:focus": {
         ...baseLinkStyle,
-        borderTop: `1px solid ${theme.sidebarColorLine}`,
-        color: theme.sidebarColorTextActive,
-        textDecoration: "none",
+        borderTop: theme.listStyles.link.hoverBorderTop,
+        textDecoration: theme.listStyles.link.hoverTextDecoration,
         background: "rgba(255,255,255,0.1)"
       }
     },
     activeLink: {
-      color: theme.sidebarColorTextActive,
-      cursor: "auto",
-      padding: "16px 40px 8px 40px",
+      cursor: theme.listStyles.activeLink.cursor,
+      margin: theme.listStyles.activeLink.margin,
       "&:hover, &:active, &:focus": {
         ...baseLinkStyle,
-        borderTop: `1px solid ${theme.sidebarColorLine}`,
-        color: theme.sidebarColorTextActive,
-        textDecoration: "none",
+        borderTop: theme.listStyles.activeLink.hoverBorderTop,
+        textDecoration: theme.listStyles.activeLink.hoverTextDecoration,
         background: "none"
-      },
-      "&:last-child": {
-        padding: "16px 40px"
       }
     },
     listItem: {
@@ -55,21 +51,20 @@ const style = theme => {
     nestedLink: {
       borderTop: "none",
       borderBottom: "none",
-      padding: "8px 24px 8px 60px",
+      margin: theme.listStyles.nestedLink.margin,
+      fontWeight: theme.listStyles.nestedLink.fontWeight,
       "&:hover, &:active, &:focus": {
         ...baseLinkStyle,
-        color: theme.sidebarColorTextActive,
-        textDecoration: "none",
+        textDecoration: theme.listStyles.nestedLink.hoverTextDecoration,
         background: "rgba(255,255,255,0.1)"
       }
     },
     nestedActiveLink: {
-      color: theme.sidebarColorTextActive,
-      cursor: "auto",
+      cursor: theme.listStyles.nestedActiveLink.cursor,
+      fontWeight: theme.listStyles.nestedActiveLink.fontWeight,
       "&:hover, &:active, &:focus": {
         ...baseLinkStyle,
-        color: theme.sidebarColorTextActive,
-        textDecoration: "none",
+        textDecoration: "underline",
         background: "none"
       }
     },

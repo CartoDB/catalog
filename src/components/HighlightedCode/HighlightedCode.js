@@ -10,7 +10,7 @@ const getStyle = theme => {
   return {
     pre: {
       ...text(theme, -0.5),
-      background: "#fff",
+      background: theme.codeStyles.backgroundColor,
       border: "none",
       boxSizing: "border-box",
       color: theme.codeColor,
